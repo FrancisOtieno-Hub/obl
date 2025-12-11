@@ -7,7 +7,10 @@ const urlsToCache = [
     '/manifest.json',
     '/books/Leverage by Francis Otieno.pdf',
     '/books/Come As You Are by Francis Otieno.pdf',
-    '/books/The Girl from the Forest by Francis Otieno.pdf'
+    '/books/The Girl from the Forest by Francis Otieno.pdf',
+    '/covers/Leverage Cover Book.jpg',
+    '/covers/Come As You Are Cover Book.jpg',
+    '/covers/The Girl from the Forest Cover Book.jpg'
 ];
 
 // Install SW and cache assets
@@ -23,3 +26,4 @@ self.addEventListener('fetch', event => {
         caches.match(event.request).then(response => response || fetch(event.request))
     );
 });
+
