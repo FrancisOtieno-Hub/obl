@@ -47,7 +47,6 @@ function renderBooks(filteredBooks) {
 
         card.innerHTML = `
             <img src="${book.cover}" class="book-cover" alt="Cover">
-            <p class="book-title">${book.title}</p>
         `;
 
         card.onclick = () => openPDF(book);
@@ -100,4 +99,5 @@ if ('serviceWorker' in navigator) {
         .then(() => console.log('Service Worker Registered'))
         .catch(err => console.log('Service Worker Failed:', err));
 }
+
 
