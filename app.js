@@ -1,9 +1,25 @@
 // List of books
 const books = [
-    { title: "Leverage", file: "books/Leverage by Francis Otieno.pdf", categories: ["Finance", "Self-Help"] },
-    { title: "Come As You Are", file: "books/Come As You Are by Francis Otieno.pdf", categories: ["Christianity"] },
-    { title: "The Girl from the Forest", file: "books/The Girl from the Forest by Francis Otieno.pdf", categories: ["Fiction"]},
+    { 
+        title: "Leverage",
+        file: "books/Leverage by Francis Otieno.pdf",
+        categories: ["Finance", "Self-Help"],
+        cover: "covers/Leverage Cover Book.jpg"
+    },
+    { 
+        title: "Come As You Are",
+        file: "books/Come As You Are by Francis Otieno.pdf",
+        categories: ["Christianity"],
+        cover: "covers/Come As You Are Cover Book.jpg"
+    },
+    { 
+        title: "The Girl from the Forest",
+        file: "books/The Girl from the Forest by Francis Otieno.pdf",
+        categories: ["Fiction"],
+        cover: "covers/The Girl from the Forest Cover Book.jpg"
+    }
 ];
+
 
 const bookList = document.getElementById('book-list');
 const searchInput = document.getElementById('search');
@@ -28,11 +44,17 @@ function renderBooks(filteredBooks) {
     filteredBooks.forEach(book => {
         const card = document.createElement('div');
         card.className = 'book-card';
-        card.textContent = book.title;
+
+        card.innerHTML = `
+            <img src="${book.cover}" class="book-cover" alt="Cover">
+            <p class="book-title">${book.title}</p>
+        `;
+
         card.onclick = () => openPDF(book);
         bookList.appendChild(card);
     });
 }
+
 
 // Open PDF with bookmark memory
 function openPDF(book) {
@@ -78,3 +100,4 @@ if ('serviceWorker' in navigator) {
         .then(() => console.log('Service Worker Registered'))
         .catch(err => console.log('Service Worker Failed:', err));
 }
+
