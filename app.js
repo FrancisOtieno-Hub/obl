@@ -1,16 +1,46 @@
 // List of books
 const books = [
     { 
-        title: "Leverage",
-        file: "books/Leverage by Francis Otieno.pdf",
-        categories: ["Finance", "Self-Help"],
-        cover: "covers/Leverage Cover Book.jpg"
+        title: "100 Best Motivational Quotes",
+        file: "books/100 Best Motivational Quotes by Francis Otieno.pdf",
+        categories: ["Motivation"],
+        cover: "covers/100 Best Motivational Quotes Cover Book.jpg"
+    },
+    { 
+        title: "Avianna",
+        file: "books/Avianna by Francis Otieno.pdf",
+        categories: ["Fiction"],
+        cover: "covers/Avianna Cover Book.jpg"
+    },
+    { 
+        title: "Ayanna",
+        file: "books/Ayanna by Francis Otieno.pdf",
+        categories: ["Finance"],
+        cover: "covers/Ayanna Cover Book.jpg"
     },
     { 
         title: "Come As You Are",
         file: "books/Come As You Are by Francis Otieno.pdf",
         categories: ["Christianity"],
         cover: "covers/Come As You Are Cover Book.jpg"
+    },
+    { 
+        title: "Crowned with Glory",
+        file: "books/Crowned with Glory by Francis Otieno.pdf",
+        categories: ["Christianity"],
+        cover: "covers/Crowned with Glory Cover Book.jpg"
+    },
+    { 
+        title: "Forge",
+        file: "books/Forge by Francis Otieno.pdf",
+        categories: ["Finance"],
+        cover: "covers/Forge Cover Book.jpg"
+    },
+    { 
+        title: "Leverage",
+        file: "books/Leverage by Francis Otieno.pdf",
+        categories: ["Finance"],
+        cover: "covers/Leverage Cover Book.jpg"
     },
     { 
         title: "The Girl from the Forest",
@@ -99,5 +129,6 @@ if ('serviceWorker' in navigator) {
         .then(() => console.log('Service Worker Registered'))
         .catch(err => console.log('Service Worker Failed:', err));
 }
+
 
 
