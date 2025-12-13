@@ -203,7 +203,7 @@ const App = (() => {
     function openBook(book) {
         activeBook = book;
         const page = localStorage.getItem(bookmarkKey(book)) || 1;
-        dom.frame.src = `pdfjs/web/viewer.html?file=${encodeURIComponent(book.file)}#page=${page}`;
+        dom.frame.src = `${book.file}#page=${page}`;
         dom.viewer.style.display = 'flex';
 
         bookmarkTimer = setInterval(saveBookmark, 4000);
@@ -267,5 +267,6 @@ const App = (() => {
 })();
 
 document.addEventListener('DOMContentLoaded', App.init);
+
 
 
