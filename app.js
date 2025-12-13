@@ -7,6 +7,12 @@ const books = [
         cover: "covers/100 Best Motivational Quotes Cover Book.jpg"
     },
     { 
+        title: "Alego Air",
+        file: "books/Alego Air by Francis Otieno.pdf",
+        categories: ["Fiction"],
+        cover: "covers/Alego Air Cover Book.jpg"
+    },
+    { 
         title: "Avianna",
         file: "books/Avianna by Francis Otieno.pdf",
         categories: ["Fiction"],
@@ -43,10 +49,88 @@ const books = [
         cover: "covers/Leverage Cover Book.jpg"
     },
     { 
+        title: "Lines on Paper",
+        file: "books/Lines on Paper by Francis Otieno.pdf",
+        categories: ["Fiction"],
+        cover: "covers/Lines on Paper Cover Book.jpg"
+    },
+    { 
+        title: "Mastering AI in 2025",
+        file: "books/Mastering AI in 2025 by Francis Otieno.pdf",
+        categories: ["Artificial Intelligence"],
+        cover: "covers/Mastering AI in 2025 Cover Book.jpg"
+    },
+    { 
+        title: "Mind Hacking",
+        file: "books/Mind-Hacking by Francis Otieno.pdf",
+        categories: ["Self-Help"],
+        cover: "covers/Mind Hacking Cover Book.jpg"
+    },
+    { 
+        title: "Overcoming Territorial Spirits",
+        file: "books/Overcoming Territorial Spirits by Francis Otieno.pdf",
+        categories: ["Christianity"],
+        cover: "covers/Overcoming Territorial Spirits Cover Book.jpg"
+    },
+    { 
+        title: "Raising Stars",
+        file: "books/Raising Stars by Francis Otieno.pdf",
+        categories: ["Parenting"],
+        cover: "covers/Raising Stars Cover Book.jpg"
+    },
+    { 
+        title: "The Africa We Must Build",
+        file: "books/The Africa We Must Build by Francis Otieno.pdf",
+        categories: ["Non-Fiction"],
+        cover: "covers/The Africa We Must Build Cover Book.jpg"
+    },
+    { 
+        title: "The Art of a Lasting Union",
+        file: "books/The Art of a Lasting Union by Francis Otieno.pdf",
+        categories: ["Relationship"],
+        cover: "covers/The Art of a Lasting Union Cover Book.jpg"
+    },
+    { 
+        title: "The Child I Had to Raise",
+        file: "books/The Child I Had to Raise by Francis Otieno.pdf",
+        categories: ["Fiction"],
+        cover: "covers/The Child I Had to Raise Cover Book.jpg"
+    },
+    { 
+        title: "The Everyday Investor",
+        file: "books/The Everyday Investor by Francis Otieno.pdf",
+        categories: ["Finance"],
+        cover: "covers/The Everyday Investor Cover Book.jpg"
+    },
+    { 
         title: "The Girl from the Forest",
         file: "books/The Girl from the Forest by Francis Otieno.pdf",
         categories: ["Fiction"],
         cover: "covers/The Girl from the Forest Cover Book.jpg"
+    },
+    { 
+        title: "The Nine-Month Journey",
+        file: "books/The Nine-Month Journey by Francis Otieno.pdf",
+        categories: ["Parenting"],
+        cover: "covers/The Nine-Month Journey Cover Book.jpg"
+    },
+    { 
+        title: "The Principle of Generosity",
+        file: "books/The Principle of Generosity by Francis Otieno.pdf",
+        categories: ["Christianity"],
+        cover: "covers/The Principle of Generosity Cover Book.jpg"
+    },
+    { 
+        title: "The Quiet Strength",
+        file: "books/The Quiet Strength by Francis Otieno.pdf",
+        categories: ["Christianity"],
+        cover: "covers/The Quiet Strength Cover Book.jpg"
+    },
+    { 
+        title: "Unshakable",
+        file: "books/Unshakable by Francis Otieno.pdf",
+        categories: ["Self-Help"],
+        cover: "covers/Unshakable Cover Book.jpg"
     }
 ];
 
@@ -129,6 +213,7 @@ if ('serviceWorker' in navigator) {
         .then(() => console.log('Service Worker Registered'))
         .catch(err => console.log('Service Worker Failed:', err));
 }
+
 
 
 
