@@ -57,13 +57,9 @@ OBL prioritizes:
 ├── service-worker.js
 ├── manifest.json
 ├── /books
-│     ├── Leverage by Francis Otieno.pdf
-│     ├── Come As You Are by Francis Otieno.pdf
-│     └── The Girl from the Forest by Francis Otieno.pdf
-└── /covers
-      ├── Leverage Cover Book.jpg
-      ├── Come As You Are Cover Book.jpg
-      └── The Girl from the Forest Cover Book.jpg
+├── /covers
+└── /icons
+
 ```
 
 ---
