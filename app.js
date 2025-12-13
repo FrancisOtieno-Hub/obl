@@ -94,7 +94,7 @@ const books = [
         title: "The Child I Had to Raise",
         file: "books/The Child I Had to Raise by Francis Otieno.pdf",
         categories: ["Fiction"],
-        cover: "covers/The Child I Had to Raise Cover Book.jpg"
+        cover: "covers/The Child I Had To Raise Cover Book.jpg"
     },
     { 
         title: "The Everyday Investor",
@@ -231,6 +231,7 @@ if ('serviceWorker' in navigator) {
         .then(() => console.log('Service Worker Registered'))
         .catch(err => console.log('Service Worker Failed:', err));
 }
+
 
 
 
