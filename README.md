@@ -1,18 +1,54 @@
-# **Otieno’s Book Library (OBL)**
-A lightweight Progressive Web App (PWA) for browsing and reading PDF books with offline support.
+# **Otieno Book Library (OBL)**
+
+*A calm, offline-first Progressive Web App for reading PDF books.*
+
+---
 
 ## **Overview**
-OBL is a minimal PWA that allows users to search, filter, and read books directly from their browser. It includes offline capabilities, category filtering, and automatic bookmark memory that resumes a reader from their last opened page.
+
+**Otieno Book Library (OBL)** is a lightweight, minimalist Progressive Web App designed for focused reading. It allows users to browse, search, and read PDF books directly in the browser while supporting offline access through intelligent caching.
+
+The app is built with simplicity and longevity in mind—fast to load, gentle on device storage, and optimized for uninterrupted reading.
+
+---
+
+## **Core Philosophy**
+
+> A good library loads quickly, remembers what you read, and stays out of the way.
+
+OBL prioritizes:
+
+* Reading immersion
+* Offline resilience
+* Low memory usage
+* Clean, distraction-free design
+
+---
 
 ## **Features**
-* **Book List Display** — Automatically renders available books.
-* **Search & Filter** — Users can search by title and filter by category.
-* **Built-in PDF Viewer** — Opens PDFs inside an iframe viewer.
-* **Auto Bookmarking** — Remembers the last opened page using `localStorage`.
-* **Offline Support** — Caches assets and books using a Service Worker.
-* **Installable PWA** — Includes a manifest for standalone installation.
+
+* **Dynamic Book Library**
+  Automatically renders available books from a predefined dataset.
+
+* **Search & Category Filtering**
+  Instantly search by title and filter books by category.
+
+* **Built-in PDF Reader**
+  Reads PDFs inside an embedded viewer without leaving the app.
+
+* **Automatic Reading Memory**
+  Remembers the last opened page and resumes reading using `localStorage`.
+
+* **Offline-First Architecture**
+  Core app assets are cached on install; books are cached **on demand** when first opened.
+
+* **Installable PWA**
+  Includes a manifest for installation on mobile and desktop as a standalone app.
+
+---
 
 ## **Project Structure**
+
 ```
 /
 ├── index.html
@@ -20,58 +56,108 @@ OBL is a minimal PWA that allows users to search, filter, and read books directl
 ├── app.js
 ├── service-worker.js
 ├── manifest.json
-└── /books
-      ├── Leverage by Francis Otieno.pdf
-      ├── Come As You Are by Francis Otieno.pdf
-      └── The Girl from the Forest by Francis Otieno.pdf
+├── /books
+│     ├── Leverage by Francis Otieno.pdf
+│     ├── Come As You Are by Francis Otieno.pdf
+│     └── The Girl from the Forest by Francis Otieno.pdf
+└── /covers
+      ├── Leverage Cover Book.jpg
+      ├── Come As You Are Cover Book.jpg
+      └── The Girl from the Forest Cover Book.jpg
 ```
+
+---
 
 ## **Installation & Setup**
 
 ### **1. Clone the project**
+
 ```bash
 git clone <your-repo-url>
 cd your-repo-folder
 ```
-### **2. Start a local server**
-PWA features (like service workers) require HTTPS or localhost.
-Use any simple server:
 
-#### Using Node:
+---
+
+### **2. Start a local server**
+
+Service workers require HTTPS or `localhost`.
+
+#### Using Node.js:
+
 ```bash
 npm install -g serve
 serve .
 ```
 
 #### Using Python:
+
 ```bash
 python3 -m http.server
 ```
 
-### **3. Visit the app**
-Open:
+---
+
+### **3. Open the app**
+
+Visit the local address shown in your terminal, for example:
+
 ```
 http://localhost:3000
 ```
-(or the port your server shows)
+
+---
 
 ## **How the PWA Works**
-* The **service worker** caches core files and PDFs to allow offline access.
-* The **manifest** enables installation on mobile and desktop.
-* The **PDF viewer** loads books inside an iframe.
-* A **bookmark system** stores the last read page and restores it when reopened.
 
-## **Add or Remove Books**
-Add your PDFs inside the `/books` folder:
+* The **service worker** caches the app shell (HTML, CSS, JS, icons) during installation.
+* PDF books and cover images are **cached only when accessed**, preventing excessive storage use.
+* Cached books remain available offline after their first read.
+* Old caches are automatically cleaned during updates.
+* The **manifest** enables installation and standalone operation.
+* The **PDF reader** restores the last read page automatically.
+
+This architecture keeps the app fast, stable, and respectful of device limits.
+
+---
+
+## **Adding or Removing Books**
+
+### **1. Add a PDF**
+
+Place your book inside the `/books` folder:
+
 ```
 /books/My New Book.pdf
 ```
-Then register the file inside `app.js`:
+
+### **2. Register it in `app.js`**
+
 ```js
-{ title: "My New Book", file: "books/My New Book.pdf", categories: ["Category"] },
+{
+  title: "My New Book",
+  file: "books/My New Book.pdf",
+  categories: ["Category"]
+}
 ```
-And add it to the `urlsToCache` list in `service-worker.js`.
+
+### **3. No service worker edits required**
+
+Books are cached automatically **when opened**, not during installation.
+
+---
+
+## **Offline Behavior Summary**
+
+| Asset Type | Caching Strategy                 |
+| ---------- | -------------------------------- |
+| App shell  | Cache-first                      |
+| PDFs       | Network-first, cached on access  |
+| Covers     | Network-first, cached on access  |
+| Updates    | Old caches removed automatically |
+
+---
 
 ## **License**
-This project is free to use and modify for personal or educational purposes.
 
+This project is free to use and modify for **personal, educational, or non-commercial purposes**.
