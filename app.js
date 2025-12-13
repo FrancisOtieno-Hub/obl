@@ -147,9 +147,9 @@ const App = (() => {
         },
         {
             title: "Work Less Earn More",
-            file: "books/Work Less, Earn More by Francis Otieno.pdf",
+            file: "books/Work Less Earn More by Francis Otieno.pdf",
             categories: ["Finance"],
-            cover: "covers/Work Less, Earn More Cover Book.jpg"
+            cover: "covers/Work Less Earn More Cover Book.jpg"
         }
     ];
 
@@ -267,3 +267,4 @@ const App = (() => {
 })();
 
 document.addEventListener('DOMContentLoaded', App.init);
+
