@@ -131,6 +131,24 @@ const books = [
         file: "books/Unshakable by Francis Otieno.pdf",
         categories: ["Self-Help"],
         cover: "covers/Unshakable Cover Book.jpg"
+    },
+    { 
+        title: "When Heaven Walks Our Roads",
+        file: "books/When Heaven Walks Our Roads by Francis Otieno.pdf",
+        categories: ["Christianity"],
+        cover: "covers/When Heaven Walks Our Roads Cover Book.jpg"
+    },
+    { 
+        title: "Wisdom in Managing Resources",
+        file: "books/Wisdom in Managing Resources by Francis Otieno.pdf",
+        categories: ["Christianity"],
+        cover: "covers/Wisdom in Managing Resources Cover Book.jpg"
+    },
+    { 
+        title: "Work Less Earn More",
+        file: "books/Work Less, Earn More by Francis Otieno.pdf",
+        categories: ["Finance"],
+        cover: "covers/Work Less, Earn More Cover Book.jpg"
     }
 ];
 
@@ -213,6 +231,7 @@ if ('serviceWorker' in navigator) {
         .then(() => console.log('Service Worker Registered'))
         .catch(err => console.log('Service Worker Failed:', err));
 }
+
 
 
 
