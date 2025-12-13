@@ -15,12 +15,21 @@
     --transition: 0.25s ease;
 }
 
-body {
+html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont,
                  "Segoe UI", Roboto, sans-serif;
     background: var(--bg);
     color: var(--text-primary);
     margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+main {
+    height: calc(100dvh - 52px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 header {
@@ -28,6 +37,8 @@ header {
     border-bottom: 1px solid #e5e7eb;
     padding: 0.75rem 1.5rem;
     text-align: center;
+    height: 52px;
+    flex-shrink: 0;
 }
 
 header h1 {
@@ -99,6 +110,9 @@ header h1 {
     gap: 1rem;
     padding: 1rem;
     background: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .filters input,
@@ -114,6 +128,7 @@ header h1 {
 .filters select:focus {
     border-color: var(--brand);
 }
+
 
 
 
