@@ -1,20 +1,27 @@
 {
-    "name": "Otieno's Book Library",
+    "name": "Otieno Book Library",
     "short_name": "OBL",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#333333",
+    "description": "A minimalist offline-first library for reading and managing digital books.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "background_color": "#f7f7f7",
+    "theme_color": "#111827",
     "icons": [
         {
             "src": "icon-192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
             "src": "icon-512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ]
 }
+
+
