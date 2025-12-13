@@ -1,7 +1,7 @@
 {
     "name": "Otieno Book Library",
     "short_name": "OBL",
-    "description": "A minimalist offline-first library for reading and managing digital books.",
+    "description": "A minimalist offline-first library for reading digital books.",
     "start_url": "./index.html",
     "scope": "./",
     "display": "standalone",
@@ -23,6 +23,7 @@
         }
     ]
 }
+
 
 
 
